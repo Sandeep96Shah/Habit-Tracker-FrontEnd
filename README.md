@@ -14,7 +14,7 @@
 
 ## Deployed
 
-[Link for the web app]
+[Link for the web app](https://hopeful-montalcini-164a2d.netlify.app/)
 
 ## To run code on local
 
