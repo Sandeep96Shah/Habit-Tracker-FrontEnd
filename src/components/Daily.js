@@ -9,13 +9,12 @@ import { FaTimes, FaCheck } from 'react-icons/fa';
 
      const { each, name, index, handleStatus } = props;
 
-     const handleDoubleClick = () => {
+     const handleClick = (status) => {
         handleStatus(status, name, index);
-        setStatus(!status);
      }
 
     return (
-        <div onDoubleClick={ () => handleDoubleClick() }>
+        <div onDoubleClick={ () => handleClick(true) } onClick={ () => handleClick(false) }>
             {each === 0 ? <div className="habit_display" ><p>{index}</p></div> : 
                 each === 1 ? <div className="habit_display"><p>{index}</p><p><FaCheck /></p></div> : 
                     <div className="habit_display"><p>{index}</p><p><FaTimes /></p></div>}
