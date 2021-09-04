@@ -4,6 +4,7 @@ import { FaStar } from 'react-icons/fa';
 import Daily from './Daily';
 import { updateHabit } from '../actions';
 
+//component to show each habit
 const Habit = (props) => {
 
     const [ eachDay, setEachDay ] = useState(false); 
@@ -38,6 +39,7 @@ const Habit = (props) => {
     )
 }
 
+//function to fetch the data from the store.
 function mapStateToProps(state){
     return {
       habits : state.habits,

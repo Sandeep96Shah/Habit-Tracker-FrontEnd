@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { FaTimes, FaCheck } from 'react-icons/fa';
 
+//component is used to show and update the current and previous day status. 
  const Daily = (props) => {
-     console.log("render daily");
      
      const [ status, setStatus ] = useState(true);
 
@@ -16,14 +16,15 @@ import { FaTimes, FaCheck } from 'react-icons/fa';
 
     return (
         <div onDoubleClick={ () => handleDoubleClick() }>
-            {each === 0 ? <div><p></p></div> : 
-                each === 1 ? <div><p><FaCheck /></p></div> : 
-                    <div><p><FaTimes /></p></div>}
+            {each === 0 ? <div className="habit_display" ><p>{index}</p></div> : 
+                each === 1 ? <div className="habit_display"><p>{index}</p><p><FaCheck /></p></div> : 
+                    <div className="habit_display"><p>{index}</p><p><FaTimes /></p></div>}
             
         </div>
     )
 }
 
+//function to fetch the data from the store
 function mapStateToProps(state){
     return {
       habits : state.habits,

@@ -1,3 +1,4 @@
+/* general styling */
 * {
   box-sizing: border-box;
 }
@@ -17,18 +18,7 @@ h1{
   margin: 0px;
   padding: 0px;
 }
-h2{
-  margin: 0px;
-  padding: 0px;
-}
-h3{
-  margin: 0px;
-  padding: 0px;
-}
-h4{
-  margin: 0px;
-  padding: 0px;
-}
+/* styling for the habit container  */
 .habit{
   height: 100vh;
   width: 100vw;
@@ -41,6 +31,7 @@ h4{
   width: 40%;
   height: auto;
 }
+/* header part styling */
 .header{
   height: 80px;
   width: 100%;
@@ -69,6 +60,7 @@ h4{
 .header_add:hover{
   background-color: blue;
 }
+/* styling for the habit list */
 .habit_list{
   width: 100%;
   padding: 10px 20px;
@@ -168,4 +160,35 @@ h4{
   height: 30px;
   font-size: 20px;
   cursor: pointer;
+}
+.habit_display{
+  display: flex;
+  flex-direction: column;
+}
+/* Responsive */
+@media screen and (max-width: 1000px){
+  .container{
+    width: 60%;
+  }
+}
+@media screen and (max-width: 800px){
+  .container{
+    width: 70%;
+  }
+}
+@media screen and (max-width: 600px){
+  .container{
+    width: 80%;
+  }
+}
+@media screen and (max-width: 500px){
+  .container{
+    width: 90%;
+  }
+  .header_title{
+    font-size: 25px;
+  }
+  .header_add{
+    font-size: 25px;
+  }
 }

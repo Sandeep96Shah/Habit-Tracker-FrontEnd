@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Habit from './Habit';
 import { addHabit } from '../actions';
 
+//component to show the header and the lists of habits.
 const App = (props) => {
 
   const [ showAdd, setShowAdd ] = useState(false);
@@ -10,13 +11,10 @@ const App = (props) => {
 
   const handleAdd = (e) => {
     e.preventDefault();
-    console.log("habit", habit);
     props.dispatch(addHabit(habit));
     setHabit("");
     setShowAdd(false);
   }
-
-  console.log("props", props.habits);
 
   const habits = props.habits;
 
@@ -49,6 +47,7 @@ const App = (props) => {
   );
 }
 
+//function to fetch the data from the store.
 function mapStateToProps(state){
   return {
     habits : state.habits,

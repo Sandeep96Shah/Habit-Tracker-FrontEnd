@@ -3,6 +3,7 @@ import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import reducer from '../reducers/index';
 
+//function for redux store
 let store;
 
 export function configureStore() {
